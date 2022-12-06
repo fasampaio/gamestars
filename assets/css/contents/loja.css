@@ -1,0 +1,70 @@
+.loja {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: .5rem;
+    background-image: var(--amarelo-gradiente);
+    border-top: 2px solid var(--preto);
+    border-bottom: 2px solid var(--preto);
+}
+
+.produto {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.produto__item {
+    padding: 1rem;
+    border: 1px solid var(--preto);
+    border-radius: 25px;
+    background-color: var(--branco);
+}
+
+.produto__item-link {
+    display: grid;
+    grid-template-areas: 
+        "imagem"
+        "nome"
+        "versao"
+        "preco";
+    grid-template-rows: repeat(4x, 1fr);
+    justify-items: center;
+    gap: .5rem;
+    text-decoration: none;
+    text-align: center;
+    color: var(--preto);
+}
+
+.produto__imagem {
+    grid-area: imagem;
+    min-height: 100px;
+    max-height: 250px;
+    min-width: 100px;
+    max-width: 250px;
+}
+
+.produto__nome {
+    grid-area: nome;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.produto__versao {
+    grid-area: versao;
+    font-size: 1.1rem;
+}
+
+.produto__preco {
+    grid-area: preco;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 1024px) {
+    .loja {
+        border-top: none;
+    }
+}

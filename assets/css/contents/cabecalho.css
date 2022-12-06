@@ -1,0 +1,222 @@
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.logo__titulo {
+    font-size: 2rem;
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+    padding: .5rem;
+    border: 4px solid var(--preto);
+    border-radius: 2rem;
+    background-color: var(--vermelho);
+}
+
+/* LOGIN */
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-top: 2px solid var(--preto);
+    border-bottom: 2px solid var(--preto);
+    background-color: var(--background-navbar);
+}
+
+.login__nome {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+/* INTRO */
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: .5rem;
+    padding: 1rem 0;
+    background-image: var(--azul-gradiente);
+}
+
+.intro__texto {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* NAVBAR */
+
+.navbar {
+    padding: 1rem;
+    border-top: 2px solid var(--preto);
+    border-bottom: 2px solid var(--preto);
+    background-color: var(--background-navbar);
+}
+
+.navbar__lista {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.navbar__link {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--fonte-texto);
+    font-size: 1.1rem;
+}
+
+/* BUSCA */
+
+.busca {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.busca__jogo {
+    padding: .5rem;
+    border: 2px solid var(--preto);
+    border-radius: 1rem;
+    text-align: center;
+    transition: .5s;
+    background-color: var(--branco);
+}
+
+.busca__jogo::placeholder {
+    font-size: .9rem;
+    color: var(--preto);
+}
+
+.busca__botao {
+    background-image: url(../../icons/busca.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--branco);
+    padding: 1rem;
+    border: 2px solid var(--preto);
+    border-radius: 100%;
+    transition: .5s;
+}
+
+.busca__jogo:hover {
+    border-color: var(--aqua);
+}
+
+.busca__botao:hover {
+    border-color: var(--aqua);
+}
+
+.busca__jogo:active {
+    border-color: var(--azul);
+}
+
+.busca__botao:active {
+    border-color: var(--azul);
+}
+
+/* RESPONSIVIDADE */
+
+@media screen and (min-width: 768px) {
+    .cabecalho {
+        display: grid;
+        grid-template-areas:
+            "logo login"
+            "intro intro"
+            "navbar navbar"
+            "busca busca";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4x, auto);
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        grid-area: logo;
+        justify-self: start;
+    }
+
+    .login {
+        grid-area: login;
+        border: none;
+        justify-content: end;
+        background: none;
+    }
+
+    .intro {
+        grid-area: intro;
+        border-top: 2px solid var(--preto);
+    }
+
+    .intro__texto {
+        font-size: 1.5rem;
+    }
+
+    .navbar {
+        grid-area: navbar;
+    }
+
+    .navbar__link {
+        font-size: 1.5rem;
+    }
+
+    .busca {
+        grid-area: busca;
+        justify-self: end;
+    }
+
+    .busca__jogo {
+        padding: .5rem 1.5rem;
+        border-radius: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .cabecalho {
+        grid-template-areas:
+            "busca logo login"
+            "intro intro intro"
+            "navbar navbar navbar";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(3x, auto);
+    }
+
+    .logo {
+        justify-self: center;
+    }
+
+    .busca {
+        justify-self: start;
+        /* justify-self: flex-start; */
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+    .intro__texto {
+        font-size: 2rem;
+    }
+
+    .navbar__link {
+        font-size: 2rem;
+    }
+
+    .busca__jogo {
+        padding: .5rem 5rem;
+        border-radius: 1.5rem;
+    }
+
+    .busca__jogo::placeholder {
+        font-size: 1.3rem;
+    }
+}

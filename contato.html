@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GameStars</title>
+
+        <link rel="stylesheet" href="./assets/css/reset.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="cabecalho">
+            <div class="logo">
+                <img src="./assets/icons/gamelogo.png" alt="logo game stars" class="logo__imagem">
+                <h1 class="logo__titulo">Game Stars</h1>
+            </div>
+            
+            <div class="login">
+                <span class="login__nome">Nome do usuário</span>
+                <a href="#" class="login__link"><img src="./assets/icons/profile.png" alt="meu perfil" class="login__imagem"></a>
+                <a href="#" class="login__link"><img src="./assets/icons/cart.png" alt="meu carrinho" class="login__imagem"></a>
+            </div>
+
+            <div class="intro">
+                <span class="intro__texto">- Tudo sobre o mundo dos games -</span>
+                <span class="intro__texto">- Críticas e avaliações de jogos -</span>
+                <span class="intro__texto">- Consoles e periféricos para sua jogatina -</span>
+            </div>
+
+            <div class="navbar">
+                <ul class="navbar__lista">
+                    <li class="navbar__item"><a href="./index.html" class="navbar__link">Home</a></li>
+                    <li class="navbar__item"><a href="./loja.html" class="navbar__link">Loja</a></li>
+                    <li class="navbar__item"><a href="./avaliacoes.html" class="navbar__link">Avaliações</a></li>
+                    <li class="navbar__item"><a href="./contato.html" class="navbar__link">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="busca">
+                <input type="search" placeholder="O que procura?" class="busca__jogo">
+                <button type="submit" class="busca__botao"></button>
+            </div>
+        </header>
+
+        <main class="contato">
+            <form action="#" class="contato__lista">
+                <label for="nomecompleto">Nome Completo:</label>
+                <input type="text" id="nomecompleto" class="contato__input" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" class="contato__input" required placeholder="usuario@dominio.com">
+                <label for="telefone">Número de contato:</label>
+                <input type="tel" id="telefone" class="contato__input" required placeholder="(xx)xxxxx-xxxx">
+                <label for="mensagem">Mensagem:</label>
+                <textarea name="#" id="mensagem" cols="10" rows="10" required></textarea>
+                <input type="submit" value="Enviar" class="submit">
+            </form>
+
+            <img src="./assets/img/wallpapercontato.jpeg" alt="wallpaper" class="contato__imagem">
+        </main>
+        
+        <footer class="rodape">
+            <div class="rodape__infos">
+                <a href="#" class="rodape__infos-link"><span class="rodape__info-texto">Sobre nós</span></a>
+                <a href="#" class="rodape__infos-link"><span class="rodape__info-texto">Segurança e privacidade</span></a>
+                <a href="#" class="rodape__infos-link"><span class="rodape__info-texto">Trabalhe conosco</span></a>
+            </div>
+            <div class="rodape__copyright">
+                <span class="rodape__texto">Developed by Fabrício Sampaio</span>
+                <span class="rodape__texto">&#169; All rights reserved. - 2022</span>
+            </div>
+        </footer>
+    </body>
+</html>
